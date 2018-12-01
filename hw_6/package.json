@@ -1,0 +1,16 @@
+{
+  "name": "hw_6",
+  "version": "1.0.0",
+  "description": "js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jest": "^23.6.0"
+  }
+}
+
