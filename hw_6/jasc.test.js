@@ -1,3 +1,4 @@
+'use strict'
 let anyString = 'Easy peasy lemon squeezy';
 let o = String("Hey, Lini!");
 let arr = [5, 2, 8, 4, 9, 1];
