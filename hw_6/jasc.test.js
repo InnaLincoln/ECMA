@@ -62,6 +62,10 @@ test('test_arrays-3', () => {
   expect(Array.from('LINCOLN')).toEqual(["L", "I", "N", "C", "O", "L", "N"]);
 });
 
+test('test_arrays-7', () => {
+  expect(arr.sort()).toEqual([1, 2, 4, 5, 8, 9]);
+});
+
 test('test_arrays-4', () => {
   expect(Array.isArray([5, 2, 8])).toEqual(true);
 });
@@ -80,25 +84,23 @@ test('test_arrays-13', () => {
   expect(arr.copyWithin(1, 4)).toEqual([5, 9, 1, 4, 9, 1]);
 });
 
-test('test_arrays-7', () => {
-  expect(arr.sort()).toEqual([1, 2, 4, 5, 8, 9]);
-});
+
 
 test('test_arrays-8', () => {
-  expect(arr.splice(1, 1, 0)).toEqual([2]);
+  expect(arr.splice(1, 1, 0)).toEqual([1]);
 });
 
 test('test_arrays-9', () => {
-  expect(arr.toString()).toEqual("5,2,8,4,9,1");
+  expect(arr.toString()).toEqual("1,0,4,5,9,9");
 });
 
 test('test_arrays-10', () => {
-  expect(Aarr.next().value).toEqual(5);
+  expect(Aarr.next().value).toEqual(1);
   expect(Aarr.next().value).toEqual(2);
 });
 
 test('test_arrays-11', () => {
-  expect(eArr.next().value).toEqual([0, 5]);
+  expect(eArr.next().value).toEqual([0, 1]);
   expect(eArr.next().value).toEqual([1, 9]);
   expect(eArr.next().value).toEqual([2, 1]);
   expect(arr.every(elem => elem > 5)).toEqual(false);
@@ -113,7 +115,7 @@ test('test_arrays-11', () => {
 });
 
 test('test_arrays-5', () => {
-  expect(arr.reverse()).toEqual([1, 9, 4, 8, 2, 5]);
+  expect(arr.reverse()).toEqual([9, 9, 5, 4, 0, 1]);
   expect(arr.fill(5)).toEqual([5, 5, 5, 5, 5, 5]);
 });
 
