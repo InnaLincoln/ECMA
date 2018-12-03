@@ -72,36 +72,36 @@ test('test_arrays-4', () => {
 
 test('test_arrays-12', () => {
   expect(arr.includes(0)).toEqual(false);
-  expect(arr.indexOf(5)).toEqual(0);
+  expect(arr.indexOf(5)).toEqual(3);
 });
 
 
 test('test_arrays-6', () => {
-  expect(arr.slice(1, 3)).toEqual([2, 8]);
+  expect(arr.slice(1, 3)).toEqual([2, 4]);
 });
 
 test('test_arrays-13', () => {
-  expect(arr.copyWithin(1, 4)).toEqual([5, 9, 1, 4, 9, 1]);
+  expect(arr.copyWithin(1, 4)).toEqual([1, 8, 9, 5, 8, 9]);
 });
 
 
 
 test('test_arrays-8', () => {
-  expect(arr.splice(1, 1, 0)).toEqual([1]);
+  expect(arr.splice(1, 1, 0)).toEqual([8]);
 });
 
 test('test_arrays-9', () => {
-  expect(arr.toString()).toEqual("1,0,4,5,9,9");
+  expect(arr.toString()).toEqual("1,0,9,5,8,9");
 });
 
 test('test_arrays-10', () => {
   expect(Aarr.next().value).toEqual(1);
-  expect(Aarr.next().value).toEqual(2);
+  expect(Aarr.next().value).toEqual(0);
 });
 
 test('test_arrays-11', () => {
   expect(eArr.next().value).toEqual([0, 1]);
-  expect(eArr.next().value).toEqual([1, 9]);
+  expect(eArr.next().value).toEqual([1, 0]);
   expect(eArr.next().value).toEqual([2, 1]);
   expect(arr.every(elem => elem > 5)).toEqual(false);
   expect(arr_text.lastIndexOf("lemon")).toEqual(2);
@@ -115,7 +115,7 @@ test('test_arrays-11', () => {
 });
 
 test('test_arrays-5', () => {
-  expect(arr.reverse()).toEqual([9, 9, 5, 4, 0, 1]);
+  expect(arr.reverse()).toEqual([9, 8, 5, 9, 0, 1]);
   expect(arr.fill(5)).toEqual([5, 5, 5, 5, 5, 5]);
 });
 
