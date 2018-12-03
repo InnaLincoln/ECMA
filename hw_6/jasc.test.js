@@ -134,7 +134,10 @@ test('test_arrays-24', () => {
 });
 
 test('test_arrays-5', () => {
-  expect(arr.reverse()).toEqual([5, 8, 5, 9, 0]);
+  expect(arr.reverse()).toEqual([5, 8, 5, 9, 0, [5]]);
+});
+
+test('test_arrays-25', () => {
   expect(arr.fill(5)).toEqual([5, 5, 5, 5, 5, 5]);
 });
 
