@@ -102,7 +102,7 @@ test('test_arrays-10', () => {
 test('test_arrays-11', () => {
   expect(eArr.next().value).toEqual([0, 1]);
   expect(eArr.next().value).toEqual([1, 0]);
-  expect(eArr.next().value).toEqual([2, 1]);
+  expect(eArr.next().value).toEqual([2, 9]);
   expect(arr.every(elem => elem > 5)).toEqual(false);
   expect(arr_text.lastIndexOf("lemon")).toEqual(2);
   expect(arr_text.map(function (items) {
