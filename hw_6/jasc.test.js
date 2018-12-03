@@ -120,7 +120,7 @@ test('test_arrays-21', () => {
 });
 
 test('test_arrays-22', () => {
-  expect(arr.pop()).toEqual(1);
+  expect(arr.pop()).toEqual(9);
 });
 
 test('test_arrays-23', () => {
@@ -128,13 +128,13 @@ test('test_arrays-23', () => {
 });
 
 test('test_arrays-24', () => {
-  expect(arr.shift()).toEqual(5);
+  expect(arr.shift()).toEqual(1);
   expect(arr.unshift([5])).toEqual(6);
   expect(arr_text.filter(word => word.length > 5)).toEqual(['squeezy']);
 });
 
 test('test_arrays-5', () => {
-  expect(arr.reverse()).toEqual([9, 8, 5, 9, 0, 1]);
+  expect(arr.reverse()).toEqual([5, 8, 5, 9, 0]);
   expect(arr.fill(5)).toEqual([5, 5, 5, 5, 5, 5]);
 });
 
