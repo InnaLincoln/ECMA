@@ -66,29 +66,38 @@ test('test_arrays-4', () => {
   expect(Array.isArray([5, 2, 8])).toEqual(true);
 });
 
-test('test_arrays-5', () => {
-  expect(arr.reverse()).toEqual([1, 9, 4, 8, 2, 5]);
+test('test_arrays-12', () => {
+  expect(arr.includes(0)).toEqual(false);
+  expect(arr.indexOf(5)).toEqual(0);
 });
+
 
 test('test_arrays-6', () => {
   expect(arr.slice(1, 3)).toEqual([2, 8]);
 });
 
+test('test_arrays-13', () => {
+  expect(arr.copyWithin(1, 4)).toEqual([5, 9, 1, 4, 9, 1]);
+});
+
 test('test_arrays-7', () => {
   expect(arr.sort()).toEqual([1, 2, 4, 5, 8, 9]);
 });
+
 test('test_arrays-8', () => {
   expect(arr.splice(1, 1, 0)).toEqual([2]);
 });
+
 test('test_arrays-9', () => {
   expect(arr.toString()).toEqual("5,2,8,4,9,1");
 });
+
 test('test_arrays-10', () => {
   expect(Aarr.next().value).toEqual(5);
   expect(Aarr.next().value).toEqual(2);
 });
+
 test('test_arrays-11', () => {
-  expect(arr.copyWithin(1, 4)).toEqual([5, 9, 1, 4, 9, 1]);
   expect(eArr.next().value).toEqual([0, 5]);
   expect(eArr.next().value).toEqual([1, 9]);
   expect(eArr.next().value).toEqual([2, 1]);
@@ -100,13 +109,12 @@ test('test_arrays-11', () => {
   expect(arr.push(5)).toEqual(6);
   expect(arr.shift()).toEqual(5);
   expect(arr.unshift([5])).toEqual(6);
-  expect(arr.fill(5)).toEqual([5, 5, 5, 5, 5, 5]);
   expect(arr_text.filter(word => word.length > 5)).toEqual(['squeezy']);
 });
 
-test('test_arrays-12', () => {
-  expect(arr.includes(0)).toEqual(false);
-  expect(arr.indexOf(5)).toEqual(0);
+test('test_arrays-5', () => {
+  expect(arr.reverse()).toEqual([1, 9, 4, 8, 2, 5]);
+  expect(arr.fill(5)).toEqual([5, 5, 5, 5, 5, 5]);
 });
 
 test('test_compare_operators', () => {
