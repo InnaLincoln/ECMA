@@ -64,8 +64,8 @@ test('test_arrays', () => {
 });
 
 test('test_arrays-1', () => {
-  expect(arr.find(function checkArr(arra) {
-    return arra > 5;})).toEqual(8);
+  expect(arr.find(function isOdd(i) {
+    return i % 2 !== 0;})).toEqual(5);
   expect(arr.includes(0)).toEqual(false);
   expect(arr.indexOf(9)).toEqual(4);
   expect(arr.join('|')).toEqual("5|2|8|4|9|1");
