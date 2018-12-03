@@ -65,7 +65,7 @@ test('test_arrays', () => {
 
 test('test_arrays-1', () => {
   expect(arr.includes(0)).toEqual(false);
-  expect(arr.indexOf(9)).toEqual(4);
+  expect(arr.indexOf(5)).toEqual(0);
   expect(arr.join('|')).toEqual("5|2|8|4|9|1");
   expect(arr_text.lastIndexOf("lemon")).toEqual(2);
   expect(arr_text.map(function (items) {
