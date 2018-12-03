@@ -103,12 +103,31 @@ test('test_arrays-11', () => {
   expect(eArr.next().value).toEqual([0, 1]);
   expect(eArr.next().value).toEqual([1, 0]);
   expect(eArr.next().value).toEqual([2, 9]);
+});
+
+test('test_arrays-19', () => {
   expect(arr.every(elem => elem > 5)).toEqual(false);
+});
+
+test('test_arrays-20', () => {
   expect(arr_text.lastIndexOf("lemon")).toEqual(2);
+});
+
+test('test_arrays-21', () => {
   expect(arr_text.map(function (items) {
-    return items.length;})).toEqual([4, 5, 5, 7]);
+    return items.length;
+  })).toEqual([4, 5, 5, 7]);
+});
+
+test('test_arrays-22', () => {
   expect(arr.pop()).toEqual(1);
+});
+
+test('test_arrays-23', () => {
   expect(arr.push(5)).toEqual(6);
+});
+
+test('test_arrays-24', () => {
   expect(arr.shift()).toEqual(5);
   expect(arr.unshift([5])).toEqual(6);
   expect(arr_text.filter(word => word.length > 5)).toEqual(['squeezy']);
