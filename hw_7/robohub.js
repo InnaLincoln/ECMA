@@ -33,15 +33,41 @@ while (isFree('south')) {
 
 
 //-------5-LEVEL-5-------//
-for(i=0; i<6; i++){east();}
-while(isFree('south')){south();}
-while(isFree('west')){west();}
-for(i=0; i<3; i++){south();}
-while(isFree('west')){west();}
-for(i=0; i<3; i++){north();}
-while(isFree('west')){west();}
-for(i=0; i<5; i++){south();}
-for(i=0; i<6; i++){east();}
+for(i=0; i<6; i++){
+  east();
+  if(isFree('south')){
+    do{
+      south();
+    }
+    while(isFree('south'));
+  }
+}
+while(!isFree('south')){
+  west();
+}
+for(i=0;i<3; i++){
+  south();
+  if(isFree('west')){
+    while(isFree('west')){
+      west();
+    }
+  }
+}
+while(isFree('north')){
+  north();
+}
+while(isFree('west')){
+  west();
+}
+for(i=0; i<7; i++){
+  south();
+  if(isFree('east')){
+    do{
+      east();
+    }
+    while(isFree('east'));
+  }
+}
 
 
 //-------6-LEVEL-6-------//
