@@ -45,5 +45,39 @@ for(i=0; i<6; i++){east();}
 
 
 //-------6-LEVEL-6-------//
+while(isFree('south')){
+  south();
+}
+for(i=0; i<6; i++){
+  if(isFree('east')){
+    east();
+  }
+  else if(isFree('north')){
+    while(isFree('north')){
+      north();
+    }
+    east();
+    do{
+      south();
+    }
+    while (isFree('south'));
+  }
+}
+for(i=0; i<4; i++){
+  south();
+}
+do{
+  west();
+}
+while(isFree('west'));
+for(i=0; i<3; i++){
+  if(isFree('south')){
+    south();
+  }
+  while(isFree('east')){
+    east();
+  }
+}
+
 
 //-------7-LEVEL-7-------//
