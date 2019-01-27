@@ -7,16 +7,11 @@
   });
 })();
 
-class Task {
+class TaskList {
   constructor() {
     this.item = document.getElementById("input").value;
     this.ul = document.getElementById("list");
     this.li = document.createElement("li");
-    this.deleteButton = document.createElement('span');
-    this.deleteButton.className = "delete";
-    this.deleteButton.innerHTML = " &#9746;";
-    this.removeItem();
-    this.checkedItem();
   }
 
   newItem() {
@@ -26,12 +21,30 @@ class Task {
       document.getElementById("input").value = "";
     }
   }
+}
+
+class Task extends TaskList {
+  constructor() {
+    super();
+    this.deleteButton = document.createElement('span');
+    this.deleteButton.className = "delete";
+    this.deleteButton.innerHTML = " &#10005";
+    this.editButton = document.createElement('span');
+    this.editButton.className = "edit";
+    this.editButton.innerHTML = " &#9998";
+    //   this.allTasks = document.querySelector('.all_tasks');
+    this.removeItem();
+    this.checkedItem();
+//    this.countTasks();
+  }
+
 
   checkedItem() {
     this.li.addEventListener('click', function () {
       this.classList.toggle('checked');
     });
     this.li.appendChild(this.deleteButton);
+    this.li.appendChild(this.editButton);
   }
 
   removeItem() {
@@ -39,6 +52,16 @@ class Task {
       this.parentElement.classList.add('remove-item');
     });
   }
+
+//  editItem(){
+//
+//  }
+//  countTasks(){
+//    let items = document.querySelectorAll(".delete");
+//      this.allTasks.innerHTML = "" + items.length;
+//
+//
+//  }
 }
 
 

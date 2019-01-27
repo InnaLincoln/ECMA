@@ -4,7 +4,6 @@ html {
 }
 
 body {
-  max-width: 500px;
   margin: 0 auto;
   color: #696969;
 }
@@ -24,11 +23,45 @@ input:focus {
 
 li {
   text-align: left;
-  font-size: 40px;
+  font-size: 35px;
   list-style: none;
   margin: 0;
   display: block;
   cursor: pointer;
+}
+
+.main_info {
+  display: flex;
+  margin-left: 250px;
+}
+
+#list {
+  margin-left: 160px;
+}
+
+.task_status, .amount_tasks {
+  display: flex;
+  outline: 0px solid #000;
+}
+
+.amount_tasks {
+  margin-top: -10px;
+  justify-content: space-around;
+  outline: 0px solid #cc0000;
+
+}
+
+.task_status li {
+  margin-right: 25px;
+  font-size: 25px;
+}
+
+.amount_tasks li {
+  font-size: 22px;
+  outline: 0px solid #000;
+  cursor: auto;
+  margin-left: -50px;
+
 }
 
 .checked {
@@ -36,13 +69,13 @@ li {
   color: #5F9EA0;
 }
 
-.delete {
+.delete, .edit {
   display: inline-block;
   cursor: pointer;
   color: #555555;
 }
 
-.delete:active {
+.delete:active, .edit:active {
   text-decoration: none;
 }
 
