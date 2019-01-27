@@ -1,0 +1,51 @@
+html {
+  font-family: "Avenir Next", Helevetica, sans-serif;
+  text-align: center;
+}
+
+body {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #696969;
+}
+
+input {
+  padding-top: 30px;
+  width: 500px;
+  height: 70px;
+  font-size: 40px;
+  border: 0;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+li {
+  text-align: left;
+  font-size: 40px;
+  list-style: none;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #5F9EA0;
+}
+
+.delete {
+  display: inline-block;
+  cursor: pointer;
+  color: #555555;
+}
+
+.delete:active {
+  text-decoration: none;
+}
+
+.remove-item {
+  display: none;
+}
