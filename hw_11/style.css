@@ -9,11 +9,12 @@ body {
 }
 
 input {
-  padding-top: 30px;
+  padding: 5px;
+  margin-top: 30px;
   width: 500px;
   height: 70px;
   font-size: 40px;
-  border: 0;
+  border: 1px dashed #696969;
   cursor: pointer;
 }
 

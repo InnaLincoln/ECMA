@@ -1,31 +1,37 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
+  const list = document.getElementById("list");
   document.getElementById('input').addEventListener("keyup", function (event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-      new Task().newItem();
+      new Task(this.value).newItem(list);
+      this.value = '';
     }
   });
-})();
+});
 
 class TaskList {
-  constructor() {
-    this.item = document.getElementById("input").value;
-    this.ul = document.getElementById("list");
-    this.li = document.createElement("li");
+  constructor(value = '') {
+    this._value = value;
   }
 
-  newItem() {
-    if (this.item.length > 2) {
-      this.li.appendChild(document.createTextNode("" + this.item));
-      this.ul.appendChild(this.li);
-      document.getElementById("input").value = "";
+  /**
+   * @param {HTMLElement} list
+   */
+  newItem(list) {
+    if (this._value.length < 3) {
+      throw new Error('Too few chapters');
     }
+
+    this.ul = list;
+    this.li = document.createElement("li");
+    this.li.appendChild(document.createTextNode("" + this._value));
+    this.ul.appendChild(this.li);
   }
 }
 
 class Task extends TaskList {
-  constructor() {
-    super();
+  newItem(list) {
+    super.newItem(list);
     this.deleteButton = document.createElement('span');
     this.deleteButton.className = "delete";
     this.deleteButton.innerHTML = " &#10005";
