@@ -11,7 +11,7 @@ body {
 input {
   padding: 5px;
   margin-top: 30px;
-  width: 500px;
+  width: 400px;
   height: 70px;
   font-size: 40px;
   border: 1px dashed #696969;
@@ -33,11 +33,11 @@ li {
 
 .main_info {
   display: flex;
-  margin-left: 250px;
+  margin-left: 200px;
 }
 
 #list {
-  margin-left: 160px;
+  margin-left: 250px;
 }
 
 .task_status, .amount_tasks {
@@ -49,11 +49,10 @@ li {
   margin-top: -10px;
   justify-content: space-around;
   outline: 0px solid #cc0000;
-
 }
 
 .task_status li {
-  margin-right: 25px;
+  margin-right: 20px;
   font-size: 25px;
 }
 
@@ -62,7 +61,6 @@ li {
   outline: 0px solid #000;
   cursor: auto;
   margin-left: -50px;
-
 }
 
 .checked {
@@ -82,4 +80,45 @@ li {
 
 .remove-item {
   display: none;
+}
+
+@media only screen and (max-width : 1200px) {
+  .about_tasks{
+    position: absolute;
+    top: 25px;
+    right: 5px;
+  }
+  #list{
+    margin-left: 110px;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .about_tasks{
+    position: absolute;
+    top: 25px;
+    right: 5px;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .task_status, .amount_tasks {
+    flex-direction: column;
+  }
+  .task_status li, .amount_tasks li{
+    font-size: 18px;
+  }
+  .amount_tasks{
+    margin-left: 110px;
+    margin-top: -80px;
+  }
+  .about_tasks{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+  }
+  input{
+    font-size: 30px;
+    width: 300px;
+  }
 }
