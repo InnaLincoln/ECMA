@@ -75,17 +75,8 @@ var Rectangle = /** @class */ (function (_super) {
 var Square = /** @class */ (function (_super) {
     __extends(Square, _super);
     function Square(center, width) {
-        var _this = _super.call(this, center, width, width) || this;
-        _this.width = width;
-        return _this;
+        return _super.call(this, center, width, width) || this;
     }
-    Square.prototype.getPerimeter = function () {
-        var squareSide = 4;
-        return squareSide * this.width;
-    };
-    Square.prototype.getArea = function () {
-        return Math.pow(this.width, exponent);
-    };
     return Square;
 }(Rectangle));
 var Circle = /** @class */ (function (_super) {

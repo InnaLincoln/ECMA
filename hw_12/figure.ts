@@ -63,17 +63,6 @@ class Square extends Rectangle {
     width: number;
     constructor(center: Point, width: number) {
         super(center, width, width);
-        this.width = width;
-    }
-
-    getPerimeter(): number {
-        const squareSide = 4;
-
-        return squareSide * this.width;
-    }
-
-    getArea(): number {
-        return this.width ** exponent;
     }
 }
 
