@@ -22,7 +22,7 @@ class Point {
 
   /**
    *
-   * @param x1
+   * @param {number} x1
    * @param y1
    * @returns {Point}
    */
