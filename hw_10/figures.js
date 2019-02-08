@@ -111,7 +111,7 @@ class Circle extends Shape {
   /**
    *
    * @param {Point} center
-   * @param {Point} radius
+   * @param {number} radius
    */
   constructor(center, radius) {
     super(radius);
