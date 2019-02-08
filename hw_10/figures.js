@@ -6,7 +6,7 @@ class Point {
 
   /**
    *
-   * @returns {*}
+   * @returns {number}
    */
   get x() {
     return this._x;
