@@ -1,0 +1,20 @@
+<div class="todo">
+
+  <div>
+    <form (submit)="addTodo($event)">
+      <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="todo-field" name="newTodo"
+             placeholder="Enter your plans here...">
+    </form>
+  </div>
+
+  <ul>
+    <li *ngFor="let todo of todo; let i=index" class="list">
+      <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
+      <input type="checkbox" id="checkbox" class="checkbox" [(ngModel)]="todo.completed">
+      <label for="checkbox"></label>
+      <span (click)="deleteTodo(i)" class="delete-butt">
+          <img src="../assets/img/delete.png" alt="delete" class="delete"></span>
+    </li>
+  </ul>
+
+</div>
