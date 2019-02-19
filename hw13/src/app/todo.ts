@@ -20,16 +20,19 @@ export class TodoComponent {
   addTodo(event) {
     this.todoObj = {
       newTodo: this.newTodo,
-      completed: false
+      isChecked: false
     };
     this.todo.push(this.todoObj);
     this.newTodo = '';
     event.preventDefault();
   }
 
+  checkTodo(idx: number) {
+    this.todo[idx].isChecked = true;
+
+  }
 
   deleteTodo(index) {
     this.todo.splice(index, 1);
   }
-
 }

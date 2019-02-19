@@ -15,30 +15,11 @@
   text-decoration: line-through;
 }
 
-#checkbox {
-  display: none;
-}
-
-#checkbox + label {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url("../assets/img/check.png");
-  margin-top: -10px;
-  cursor: pointer;
-}
-
-#checkbox:checked + label {
-  text-decoration: underline;
-}
-
-#checkbox:checked + label:before {
-  text-decoration: underline;
-}
-
-.todo .delete-butt {
+.check {
   display: inline-block;
   cursor: pointer;
+  position: relative;
+  top: -10px;
 }
 
 li {
@@ -64,6 +45,8 @@ ul {
   height: 40px;
   margin-top: -7px;
   margin-left: -5px;
+  display: inline-block;
+  cursor: pointer;
 }
 
 

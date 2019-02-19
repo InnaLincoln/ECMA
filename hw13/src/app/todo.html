@@ -9,11 +9,9 @@
 
   <ul>
     <li *ngFor="let todo of todo; let i=index" class="list">
-      <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
-      <input type="checkbox" id="checkbox" class="checkbox" [(ngModel)]="todo.completed">
-      <label for="checkbox"></label>
-      <span (click)="deleteTodo(i)" class="delete-butt">
-          <img src="../assets/img/delete.png" alt="delete" class="delete"></span>
+      <span [ngClass]="{'checked': todo.isChecked}">{{ todo.newTodo }}</span>
+      <img (click)="checkTodo(i)" src="../assets/img/check.png" alt="check" class="check">
+      <img (click)="deleteTodo(i)" src="../assets/img/delete.png" alt="delete" class="delete">
     </li>
   </ul>
 
