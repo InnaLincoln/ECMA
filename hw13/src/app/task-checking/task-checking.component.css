@@ -1,0 +1,6 @@
+.check {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+}

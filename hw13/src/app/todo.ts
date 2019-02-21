@@ -9,7 +9,7 @@ import {Component} from '@angular/core';
 export class TodoComponent {
 
   newTodo: string;
-  todo: any;
+  todo: Array<{newTodo: string, isChecked: boolean, isDeleted: boolean}>;
   todoObj: any;
 
   constructor() {
@@ -20,19 +20,15 @@ export class TodoComponent {
   addTodo(event) {
     this.todoObj = {
       newTodo: this.newTodo,
-      isChecked: false
+      isChecked: false,
+      isDeleted: false
     };
     this.todo.push(this.todoObj);
     this.newTodo = '';
     event.preventDefault();
   }
 
-  checkTodo(idx: number) {
-    this.todo[idx].isChecked = true;
-
-  }
-
-  deleteTodo(index) {
-    this.todo.splice(index, 1);
+  update(e) {
+    console.warn(e);
   }
 }
