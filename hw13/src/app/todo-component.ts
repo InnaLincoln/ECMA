@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'todo',
-  templateUrl: 'todo.html',
-  styleUrls: ['todo.css']
+  templateUrl: 'todo-component.html',
+  styleUrls: ['todo-component.css']
 })
 
 export class TodoComponent {

@@ -1,0 +1,18 @@
+.check {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+}
+
+.delete {
+  position: relative;
+  top: -7px;
+  left: -5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.task-deleted {
+  display: none;
+}

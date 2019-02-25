@@ -10,8 +10,7 @@
   <ul>
     <li *ngFor="let todo of todo" class="list" [ngClass]="{'task-deleted': todo.isDeleted}">
       <span [ngClass]="{'checked': todo.isChecked}">{{ todo.newTodo }}</span>
-      <app-task-checking [task]="todo" (synchronize)="update($event)"></app-task-checking>
-      <app-task-removing [task]="todo"></app-task-removing>
+      <app-task-detail [task]="todo" (synchronize)="update($event)"></app-task-detail>
     </li>
   </ul>
 
